@@ -1,0 +1,31 @@
+BoxLayout:
+    orientation: "vertical"
+    padding: 20
+    spacing: 20
+
+    canvas.before:
+        Color:
+            rgb: 0,0,0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "HP SECURITY TOOL"
+        color: 0,1,0,1
+        font_size: 30
+
+    Button:
+        text: "SCAN SYSTEM"
+        background_color: 0,1,0,1
+        on_press: app.scan()
+
+    Button:
+        text: "BACKUP"
+        background_color: 0,1,0,1
+        on_press: app.backup()
+
+    Button:
+        text: "EXIT"
+        background_color: 1,0,0,1
+        on_press: app.stop()
